@@ -52,7 +52,7 @@ export default function Navbar() {
           <MobileMenu />
           {navigations.map((nav) => (
             <a
-              className='md:text-lg font-normal hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg  hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
+              className='md:text-lg font-normal hidden sm:inline-block p-1 sm:px-3 sm:py-2 rounded-lg  hover:bg-gray-200 dark:hover:bg-gray-800 transition-all'
               href={nav.path}
               key={nav.label}
             >

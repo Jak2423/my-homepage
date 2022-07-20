@@ -23,7 +23,7 @@ export default function MobileMenu() {
     <>
       <button
         aria-label='Toggle Menu'
-        className='visible md:hidden relative'
+        className='visible sm:hidden relative'
         onClick={toggleMenu}
       >
         {!isMenuOpen ? (

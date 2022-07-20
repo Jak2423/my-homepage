@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <div className='flex flex-col justify-center items-start max-w-2xl mx-auto w-full'>
-      <div className='' id='home'>
+      <div className='h-screen' id='home'>
         <div>
           <h1 className='font-bold text-3xl md:text-5xl tracking-tight mb-8'>
             Hi, I'm Javkhlan.
@@ -38,11 +38,19 @@ export default function Home() {
         </div>
         <div className='flex flex-row mb-8'>
           {contacts.map((contact) => (
-            <Link href={contact.link} key={contact.label} isExternal>
-              <button className='flex flex-row justify-center items-center bg-gray-200 dark:bg-gray-800 rounded-lg px-4 py-2 mr-4 hover:bg-gray-400 dark:hover:bg-gray-600'>
+            <button
+              className='flex justify-center items-center bg-gray-200 dark:bg-gray-800 rounded-lg px-4 py-2 mr-4 hover:bg-gray-400 dark:hover:bg-gray-600 transition'
+              key={contact.label}
+            >
+              <a
+                className='flex flex-row'
+                href={contact.link}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
                 {contact.icon} {contact.label}
-              </button>
-            </Link>
+              </a>
+            </button>
           ))}
         </div>
       </div>
